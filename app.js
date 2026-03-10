@@ -2,12 +2,12 @@ const scorecards = [
   {
     label: '战略价值',
     value: '8.5 / 10',
-    text: '方向对，既能做短期变现，也有机会沉淀为影楼 AI 升级方案。'
+    text: '方向对，既能做短期变现，也有机会沉淀为影楼 AI 升级解决方案。'
   },
   {
     label: '短期变现能力',
     value: '8 / 10',
-    text: '预览包、轻写真、精修升级包都能比较快卖出去。'
+    text: '预演卡、升级写真、超清精修都能比较快卖出去。'
   },
   {
     label: '落地难度',
@@ -32,7 +32,7 @@ const pains = [
   },
   {
     title: '提高交付效率',
-    description: '通过图像中台型工作流，把后期从纯人工变成 AI 批处理 + 人工质检。'
+    description: '通过图像中台型能力，把后期从纯人工变成 AI 批处理 + 人工质检。'
   },
   {
     title: '扩展收入边界',
@@ -43,82 +43,97 @@ const pains = [
 const productLines = [
   {
     tag: '引流产品线',
-    title: 'AI 风格预览 / AI 试拍',
-    description: '用低门槛预览替代抽象沟通，让客户先看到效果，再决定是否升级正式拍摄。',
-    bullets: ['对应产品：贴身品类换装（2509）、全能图片 Pro', '适合：婚纱、礼服、写真咨询转化', '目标：提升咨询转成交率']
+    title: 'AI 风格预演卡',
+    description: '用低门槛预演替代抽象沟通，让客户先看到效果，再决定是否升级正式拍摄。',
+    bullets: ['适合：婚纱、礼服、写真咨询转化', '作用：提升咨询转成交率', '前端卖点：先看效果，再决定下单']
   },
   {
     tag: '主力营收产品线',
-    title: 'AI 轻写真 / AI 升级写真',
+    title: 'AI 升级写真',
     description: '把一次底图变成多套风格和多种交付物，适合门店做标准化高颜值产品。',
-    bullets: ['对应产品：全能图片 Pro、全能图片 2.0、三宫格电影氛围感写真', '适合：朋友圈写真、情侣、轻婚纱', '目标：形成主力营收款']
+    bullets: ['适合：朋友圈写真、情侣、轻婚纱', '作用：形成主力营收款', '前端卖点：一次底图，延展多套风格']
   },
   {
     tag: '高毛利产品线',
-    title: 'AI 精修增强 / 老照片修复',
+    title: 'AI 超清精修',
     description: '不改人，重点提升清晰度、质感和放大能力，是最容易让客户直接付费的加购点。',
-    bullets: ['对应产品：FLUX.2-Klein 高清修复', '适合：出册、挂画、低像素补救、老照片', '目标：做高毛利加购']
+    bullets: ['适合：出册、挂画、低像素补救、老照片', '作用：做高毛利加购', '前端卖点：更清晰、更高级、更适合打印']
   },
   {
     tag: '业务扩展产品线',
     title: '商家视觉内容服务',
     description: '帮助门店从 C 端写真扩展到 B 端本地商家视觉服务，打开新的收入天花板。',
-    bullets: ['对应产品：一键生成产品多角度场景专业摄影、全能图片 Pro', '适合：花店、饰品、婚庆、美甲、服装', '目标：扩展 B 端收入']
+    bullets: ['适合：花店、饰品、婚庆、美甲、服装', '作用：扩展 B 端收入', '前端卖点：轻量商拍，适合高频上新']
   }
 ];
 
-const products = [
+const cases = [
   {
-    rank: 'S 级 · 必试',
-    name: '全能图片 Pro',
-    link: 'https://www.runninghub.cn/ai-detail/1991550248581603329',
-    meta: ['全能图片', '约 635.4K 使用', '715 点赞', '2773 收藏', '成功率 91%', '平均 71s'],
-    description: '最像影楼 AI 后期工厂底座的具体产品，可以承接图生图、文生图、海报图、发圈图、套系样张等多种任务。',
-    uses: ['AI 轻写真', '写真多风格延展', '朋友圈图 / 海报图 / 样张生产'],
-    packaging: ['门店主力营收款', 'AI 后期中台', '套餐升级引擎']
-  },
-  {
-    rank: 'S 级 · 必试',
-    name: '贴身品类换装（2509）',
+    id: 'case-preview',
+    rank: '案例 01 · 成交工具',
+    name: 'AI 风格预演卡',
+    sourceName: '贴身品类换装（2509）',
     link: 'https://www.runninghub.cn/ai-detail/1990350901753901058',
-    meta: ['服装展示', '9586 使用', '62 点赞', '735 收藏', '成功率 99%', '平均 236s'],
-    description: '最适合做成交辅助的具体产品。适合让客户在正式下单前先看到婚纱、礼服、写真服装的预览效果。',
+    jump: '#product-lines',
+    meta: ['婚纱 / 礼服 / 写真', '9586 使用', '62 点赞', '735 收藏', '成功率 99%'],
+    description: '最适合放在前端咨询环节的能力原型。它的价值不在最终成片，而在先让客户看到效果，提升成交率。',
     uses: ['婚纱 / 礼服试样', '写真风格试看', '礼服馆联营试装图'],
-    packaging: ['AI 试装预览卡', '婚纱 / 礼服风格预览', '咨询转化工具']
+    packaging: ['低价引流', '成交辅助', '预演即转化']
   },
   {
-    rank: 'S 级 · 高毛利',
-    name: 'FLUX.2-Klein 高清修复',
+    id: 'case-photo-factory',
+    rank: '案例 02 · 主力营收',
+    name: 'AI 升级写真工厂',
+    sourceName: '全能图片 Pro',
+    link: 'https://www.runninghub.cn/ai-detail/1991550248581603329',
+    jump: '#pricing',
+    meta: ['多风格写真', '约 635.4K 使用', '715 点赞', '2773 收藏', '成功率 91%'],
+    description: '这是最像影楼 AI 后期工厂底座的能力原型，适合承接 AI 轻写真、套系延展、海报和发圈图。',
+    uses: ['AI 轻写真', '写真多风格延展', '朋友圈图 / 海报图 / 样张生产'],
+    packaging: ['主力套餐', '后期中台', '多风格交付']
+  },
+  {
+    id: 'case-retouch',
+    rank: '案例 03 · 高毛利加购',
+    name: 'AI 超清精修包',
+    sourceName: 'FLUX.2-Klein 高清修复',
     link: 'https://www.runninghub.cn/ai-detail/2013556064565858306',
-    meta: ['老照片修复', '高清放大', '6585 使用', '37 点赞', '304 收藏', '平均 47s'],
-    description: '最适合直接卖钱的高毛利产品，重点提升人物清晰度、细节质感和出册放大能力。',
+    jump: '#pricing',
+    meta: ['高清放大', '6585 使用', '37 点赞', '304 收藏', '平均 47s'],
+    description: '最适合直接卖钱的高毛利能力原型，重点提升人物清晰度、细节质感和出册放大能力。',
     uses: ['高清精修升级', '老照片修复', '放大出册 / 挂画'],
-    packaging: ['AI 高清精修包', '8K 人像增强包', '老照片修复焕新版']
+    packaging: ['高毛利加购', '打印升级', '老照片焕新']
   },
   {
-    rank: 'A 级 · B 端扩展',
-    name: '一键生成产品多角度场景专业摄影',
+    id: 'case-biz',
+    rank: '案例 04 · B 端扩展',
+    name: '商家内容快拍工厂',
+    sourceName: '一键生成产品多角度场景专业摄影',
     link: 'https://www.runninghub.cn/ai-detail/2026115899555586050',
-    meta: ['物品摄影', '模特产品展示', '100 使用', '7 点赞', '31 收藏', '平均 105s'],
-    description: '虽然平台热度不算高，但非常适合门店延展到本地商家产品图、活动图和社媒图服务。',
+    jump: '#roadmap',
+    meta: ['产品场景图', '100 使用', '7 点赞', '31 收藏', '平均 105s'],
+    description: '非常适合影楼切到本地商家视觉服务：新品图、活动图、社媒图都能快速交付。',
     uses: ['产品场景图', '本地商家视觉服务', '轻量商拍内容包'],
-    packaging: ['商家 AI 视觉包', '轻量商拍内容包', '月度商家内容服务']
+    packaging: ['B 端服务', '月度内容包', '本地商家合作']
   },
   {
-    rank: 'A 级 · 营销模板',
-    name: '三宫格电影氛围感写真（又是一年冬）',
+    id: 'case-social',
+    rank: '案例 05 · 传播模板',
+    name: '社媒传播写真模板',
+    sourceName: '三宫格电影氛围感写真（又是一年冬）',
     link: 'https://www.runninghub.cn/ai-detail/1982060072979308545',
-    meta: ['人像写真', '场景道具', '3950 使用', '79 点赞', '281 收藏'],
-    description: '更适合作为门店营销型写真模板，用来做主题活动、社媒传播和轻交付产品。',
+    jump: '#launch-pack',
+    meta: ['节日写真', '3950 使用', '79 点赞', '281 收藏'],
+    description: '更适合作为门店营销型模板，用来做主题活动、社媒传播和低门槛轻交付产品。',
     uses: ['节日写真', '三宫格传播图', '门店引流模板'],
-    packaging: ['AI 主题写真', '朋友圈传播款', '小红书视觉模板']
+    packaging: ['传播引流', '节日主题', '社媒模板']
   }
 ];
 
 const moats = [
   {
     title: '套餐设计能力',
-    text: '同样的工作流，能不能被包装成引流款、主力款、加购款、B 端款，决定了商业价值。'
+    text: '同样的能力原型，能不能被包装成引流款、主力款、加购款、B 端款，决定了商业价值。'
   },
   {
     title: '交付稳定性',
@@ -126,7 +141,7 @@ const moats = [
   },
   {
     title: '销售转化话术',
-    text: '换装预览和风格预览最强的地方不是图，而是成交辅助。'
+    text: '风格预演最强的地方不是图，而是让客户更容易下决定。'
   },
   {
     title: '本地案例密度',
@@ -136,8 +151,8 @@ const moats = [
 
 const risks = [
   {
-    title: '沉迷工作流，不做产品化',
-    text: '如果团队一直研究哪个流更酷，而不是客户为什么愿意付钱，最后只会变成展示项目。'
+    title: '沉迷能力，不做产品化',
+    text: '如果团队一直研究哪个案例更酷，而不是客户为什么愿意付钱，最后只会变成展示项目。'
   },
   {
     title: '生成效果不稳定',
@@ -145,7 +160,7 @@ const risks = [
   },
   {
     title: '前端表达错位',
-    text: '对外不能卖“RunningHub 工作流”，要卖“更省时间、更高颜值、更适合传播的服务”。'
+    text: '对外不能卖“工作流”，要卖“更省时间、更高颜值、更适合传播的服务”。'
   },
   {
     title: '一上来就想做平台',
@@ -186,29 +201,46 @@ function renderLines() {
   `).join('');
 }
 
-function renderProducts() {
+function renderCaseNav() {
+  const container = document.getElementById('caseNavGrid');
+  container.innerHTML = cases.map(item => `
+    <article class="case-nav-card">
+      <a class="case-anchor" href="#${item.id}">${item.name}</a>
+      <div class="case-nav-actions">
+        <a class="mini-link" href="#${item.id}">页内跳转</a>
+        <a class="mini-link external" href="${item.link}" target="_blank" rel="noreferrer">外链案例 ↗</a>
+      </div>
+    </article>
+  `).join('');
+}
+
+function renderCases() {
   const container = document.getElementById('productGrid');
-  container.innerHTML = products.map(product => `
-    <article class="product-card">
+  container.innerHTML = cases.map(item => `
+    <article class="product-card" id="${item.id}">
       <div class="product-top">
         <div>
-          <div class="product-rank">${product.rank}</div>
-          <h3>${product.name}</h3>
+          <div class="product-rank">${item.rank}</div>
+          <h3>${item.name}</h3>
+          <div class="source-note">原始案例：${item.sourceName}</div>
         </div>
-        <a class="product-link" href="${product.link}" target="_blank" rel="noreferrer">打开产品 ↗</a>
+        <div class="action-stack">
+          <a class="product-link" href="${item.link}" target="_blank" rel="noreferrer">查看外链案例 ↗</a>
+          <a class="product-link ghost" href="${item.jump}">跳到相关策略 ↓</a>
+        </div>
       </div>
       <div class="product-meta">
-        ${product.meta.map(item => `<span>${item}</span>`).join('')}
+        ${item.meta.map(meta => `<span>${meta}</span>`).join('')}
       </div>
-      <p>${product.description}</p>
+      <p>${item.description}</p>
       <div>
         <strong>适合用途</strong>
-        <ul>${product.uses.map(item => `<li>${item}</li>`).join('')}</ul>
+        <ul>${item.uses.map(use => `<li>${use}</li>`).join('')}</ul>
       </div>
       <div>
         <strong>建议包装</strong>
         <div class="product-bottom">
-          ${product.packaging.map(item => `<span class="pill">${item}</span>`).join('')}
+          ${item.packaging.map(tag => `<span class="pill">${tag}</span>`).join('')}
         </div>
       </div>
     </article>
@@ -228,6 +260,7 @@ function renderStackList(targetId, items, tone = '') {
 renderScorecards();
 renderPains();
 renderLines();
-renderProducts();
+renderCaseNav();
+renderCases();
 renderStackList('moatList', moats, 'tone-positive');
 renderStackList('riskList', risks, 'tone-warning');
