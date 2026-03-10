@@ -73,6 +73,8 @@ const cases = [
     rank: '案例 01 · 成交工具',
     name: 'AI 风格预演卡',
     sourceName: '贴身品类换装（2509）',
+    image: './assets/images/case-bridal.jpg',
+    imageAlt: '婚纱与礼服风格预演参考图',
     link: 'https://www.runninghub.cn/ai-detail/1990350901753901058',
     jump: '#product-lines',
     meta: ['婚纱 / 礼服 / 写真', '9586 使用', '62 点赞', '735 收藏', '成功率 99%'],
@@ -85,6 +87,8 @@ const cases = [
     rank: '案例 02 · 主力营收',
     name: 'AI 升级写真工厂',
     sourceName: '全能图片 Pro',
+    image: './assets/images/case-fashion.jpg',
+    imageAlt: '时尚写真升级参考图',
     link: 'https://www.runninghub.cn/ai-detail/1991550248581603329',
     jump: '#pricing',
     meta: ['多风格写真', '约 635.4K 使用', '715 点赞', '2773 收藏', '成功率 91%'],
@@ -97,6 +101,8 @@ const cases = [
     rank: '案例 03 · 高毛利加购',
     name: 'AI 超清精修包',
     sourceName: 'FLUX.2-Klein 高清修复',
+    image: './assets/images/case-studio.jpg',
+    imageAlt: '高质感人像精修参考图',
     link: 'https://www.runninghub.cn/ai-detail/2013556064565858306',
     jump: '#pricing',
     meta: ['高清放大', '6585 使用', '37 点赞', '304 收藏', '平均 47s'],
@@ -109,6 +115,8 @@ const cases = [
     rank: '案例 04 · B 端扩展',
     name: '商家内容快拍工厂',
     sourceName: '一键生成产品多角度场景专业摄影',
+    image: './assets/images/case-product.jpg',
+    imageAlt: '商家产品内容拍摄参考图',
     link: 'https://www.runninghub.cn/ai-detail/2026115899555586050',
     jump: '#roadmap',
     meta: ['产品场景图', '100 使用', '7 点赞', '31 收藏', '平均 105s'],
@@ -121,6 +129,8 @@ const cases = [
     rank: '案例 05 · 传播模板',
     name: '社媒传播写真模板',
     sourceName: '三宫格电影氛围感写真（又是一年冬）',
+    image: './assets/images/case-wedding.jpg',
+    imageAlt: '社媒传播写真参考图',
     link: 'https://www.runninghub.cn/ai-detail/1982060072979308545',
     jump: '#launch-pack',
     meta: ['节日写真', '3950 使用', '79 点赞', '281 收藏'],
@@ -201,6 +211,19 @@ function renderLines() {
   `).join('');
 }
 
+function renderGallery() {
+  const container = document.getElementById('galleryGrid');
+  container.innerHTML = cases.map(item => `
+    <article class="gallery-card">
+      <img src="${item.image}" alt="${item.imageAlt}" loading="lazy" />
+      <div class="gallery-copy">
+        <strong>${item.name}</strong>
+        <span>${item.rank}</span>
+      </div>
+    </article>
+  `).join('');
+}
+
 function renderCaseNav() {
   const container = document.getElementById('caseNavGrid');
   container.innerHTML = cases.map(item => `
@@ -218,6 +241,9 @@ function renderCases() {
   const container = document.getElementById('productGrid');
   container.innerHTML = cases.map(item => `
     <article class="product-card" id="${item.id}">
+      <div class="product-image-wrap">
+        <img class="product-image" src="${item.image}" alt="${item.imageAlt}" loading="lazy" />
+      </div>
       <div class="product-top">
         <div>
           <div class="product-rank">${item.rank}</div>
@@ -260,6 +286,7 @@ function renderStackList(targetId, items, tone = '') {
 renderScorecards();
 renderPains();
 renderLines();
+renderGallery();
 renderCaseNav();
 renderCases();
 renderStackList('moatList', moats, 'tone-positive');
